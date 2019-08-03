@@ -110,7 +110,7 @@
              $("#blank-image").html($(this).html())
              $('.blank-image-wrap').fadeIn()
              $('.close-icon').fadeIn()
-             $('body').css('overflow-y','hidden');
+            $('body').css('position:', 'fixed','overflow-y','scroll')
              
          })
      })
@@ -118,26 +118,68 @@
             $(this).fadeOut()
             $('.blank-image-wrap').fadeOut()
             $('body').css('overflow-y','visible');
+            $('.green-living-wrap').fadeOut()
         })
         
+        
+        $(".news-info-des").each(function(){
+            
+            var $_this = $(this)
+            $_this.click(function(){
+                
+                var tiTle = $_this.find('.news-coll-info').html()
+                var descriptionTxt = $_this.find('.news-info-content').html()
+                var imageTomakeLarge = $_this.find('.news-info-thumb').html()
 
+                //$('#greenFullViewImage').html('')
+                $('#greenFullViewImage').html(imageTomakeLarge);
+                //$('#greenTitle').html('');
+                $('#greenTitle').html(tiTle);
+                //$('#greenLivingTxt').html('');
+                $('#greenLivingTxt').html(descriptionTxt);
+                
+                $('#greenLivingWrap').fadeIn(500)
+                $('.close-icon').fadeIn(500)
+                $('body').css('position:', 'fixed','overflow-y','scroll')
+            });
+        });
         
-
+        
+    
+           
+   /*
+           $('.news-info-thumb-deals a.expandicon').click(function(e){
+                 e.preventDefault();
+               console.log("shar")
+               $('body').addClass("fullWiden")
+                
+            })
+     */
+        
+        $('body').on('click', 'a.expandicon', function(e) {
+             console.log("shar")
+            $('body').addClass("fullWiden")
+        });
         
         
         
         
         
+//        $(".news-info-text").each(function(){
+//           $(this).find(".news-info-content").addClass("gotten")
+//        })
+//      
+//     
         
         
         
-		
+        
 	})// End ready function.
 
 	$(window).on('load', function(){
         // Begin common slider
         
-        $("#styled").mCustomScrollbar();
+        $(".styled").mCustomScrollbar();
         
         
     })
