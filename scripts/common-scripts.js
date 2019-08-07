@@ -26,7 +26,7 @@
         $('.phone-nav').click(function(){
             $(".nav-wrap").slideToggle();
             $("body").toggleClass("navShown")
-            $(window).off('scroll');
+           //$('body').css('overflow', 'hidden');
         });
         
 
@@ -100,7 +100,7 @@
                      $("#blank-image").html($(this).html())
                      $('.blank-image-wrap').fadeIn()
                      $('.close-icon').fadeIn()
-                    $('body').css('position:', 'fixed','overflow-y','scroll')
+                    $('body').css('position:', 'fixed','overflow:','hidden')
 
                  })
              })
@@ -119,7 +119,7 @@
                     $_this.click(function(){
 
                         var tiTle = $_this.find('.news-coll-info').html()
-                        var descriptionTxt = $_this.find('.news-info-content').html()
+                        var descriptionTxt = $_this.find('.news-info-content').next('div.hidden-txt').html()
                         var imageTomakeLarge = $_this.find('.news-info-thumb').html()
 
                         //$('#greenFullViewImage').html('')
@@ -131,7 +131,7 @@
 
                         $('#greenLivingWrap').fadeIn(500)
                         $('.close-icon').fadeIn(500)
-                        $('body').css('position:', 'fixed','overflow-y','scroll')
+                        $('body').css('position:', 'fixed','overflow:','hidden')
                         $('body').addClass("header-bg")
 
                     });
@@ -192,6 +192,95 @@
 
                     return false;
                 });    
+        
+        
+         $('.video-info').each(function(){
+                var $_this = $(this)
+                $_this.find(".video-play-button").on('click', function(e){
+                    e.preventDefault();
+                    $_this.find('.video-overlay').addClass('open');
+                    $(this).fadeOut();
+                    $_this.find(".tutorial").html( $_this.find('div.video-container').html());
+                    $_this.parents('.main-content-wrap').css({'z-index': 302});
+                });
+
+               $_this.find('.video-overlay, .video-overlay-close').on('click', function (e) {
+                    e.preventDefault();
+                    close_video();
+                });
+
+                $(document).keyup(function (e){
+                    if (e.keyCode === 27) {
+                        close_video();
+                    }
+                });
+
+                function close_video(){
+                    $_this.find('.video-overlay.open').removeClass('open').find('iframe').remove();
+                    $_this.find(".video-play-button").fadeIn();
+                    
+                };  
+             
+        })
+        
+        
+        
+        
+        
+                var delayTime = 0;
+        var tdelayTime = 3.2;
+        var pTdelayTime = 2.6;
+        
+        $('.sgv-text').each(function(i){
+            $(this).css({
+                'transition-delay' : tdelayTime + (i*3.2) + 's',
+            })
+            $(this).find('path').css({
+                'animation-delay' : delayTime + (i*3.2) + 's',
+                'transition-delay' : pTdelayTime + (i*3.2) + 's'
+            });
+        })
+        
+        
+         // This function for scroll from bottom animation
+        var $animation_elements = $('.animate');
+        var $window = $(window);
+
+        function check_if_in_view() {
+            var window_height = $window.height();
+            var window_top_position = $window.scrollTop();
+            var window_bottom_position = (window_top_position + window_height);
+
+            $.each($animation_elements, function () {
+                var $element = $(this);
+                var element_height = $element.outerHeight();
+                var element_top_position = $element.offset().top;
+                var element_bottom_position = (element_top_position + element_height);
+
+                //check to see if this current container is within viewport
+                if (element_top_position <= window_bottom_position) {
+                    $element.addClass('start-animate');
+                } else {
+                    //$element.removeClass('start-animate');
+                }
+            });
+        }
+
+        $window.on('scroll resize', check_if_in_view);
+        $window.trigger('scroll');
+        
+        
+        
+        
+        $(document).ready(function () {
+            $(".news-info-content p").each(function (i) {
+                var len = $(this).text().trim().length;
+                if (len > 100) {
+                    $(this).text($(this).text().substr(0, 103) + ' ' + '...');
+                }
+            });
+        });
+        
         
         
 //        $(".news-info-text").each(function(){

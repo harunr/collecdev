@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
-        <title>Collecdev | Landing</title>
+        <title>Collecdev | Home</title>
 
         <link type="text/css" rel="stylesheet" href="css/slick.css">
         <link type="text/css" rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
@@ -101,16 +101,14 @@
             <!-- Beginning main content section 
             ==================================== -->
             <section class="main-content-wrap home-content">
-                <div class="manual-controlled">
+                 <div class="manual-controlled">
                     <ul id="navigation_bullet">
-                        <li class="current-menu-item"><a href="#hero"></a></li>
+                        <li class="current-menu-item"><a href="#welcome"></a></li>
                         <li><a href="#content-details"></a></li>
-                        <li><a href="#tab"></a></li>
-                        <li><a href="#news"></a></li>
-                        <li><a href="#article"></a></li>
+                        <li><a href="#purchase"></a></li>
                     </ul>
                 </div>
-                <section class="hero-content-section scroll" id="hero">
+                <section class="hero-content-section scroll" id="welcome">
                     <div class="common-wrap clear">
                         <div class="hero-video-wrapper">
                             <div class="video-text-wrap">
@@ -124,13 +122,20 @@
                                 <p class="video-text">Qualified buyers can find a new home in one of our vibrant communities, receiving an interest-and payment-free down payment assistance loan.</p>
                             </div>
                             <div class="video-wrap">
-                                <div class="play-icon"><img src="images/play-icon.png" alt=""></div>
                                 <div class="video-info" style="background-image: url(images/video-banner.jpg)">
-                                    <!--<video autoplay muted="muted" requestFullScreen loop id="video">
-                                         <source src="videos/puppy-in-grass-2.mp4" type="video/mp4">
-                                    </video>-->
+                                    <a href="#" class="video-play-button play-icon"><img src="images/play-icon.png" alt=""><span></span></a>
+
+                                    <div class="video-container" style="display: none">
+                                        <iframe style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" src="https://www.youtube.com/embed/LmHBrvqhoSQ" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="video-overlay">
+                                        <a class="video-overlay-close"><img src="images/video-close-icon.png" alt=""></a>
+                                        <div class="tutorial"></div>
+                                    </div>
                                 </div>
+                                
                             </div>
+                            
                         </div>
                     </div>
                 </section>
@@ -170,7 +175,6 @@
                            <a href="#" class="btn yellow-bg large textuppercase">register now</a>
                        </div> 
                    </div>
-                   
                     <div class="big-text-deals">
                         <span>h</span>
                         <span>o</span>
@@ -181,7 +185,7 @@
                         <span>e</span>
                     </div>
                 </section>
-                <section class="purchase-details-section">
+                <section class="purchase-details-section" id="purchase">
                     <div class="common-wrap clear">
                         <div class="purchase-details-wrap">
                             <div class="purchase-title-info">
@@ -200,47 +204,52 @@
                                 </div>
                                 <div class="purchase-item">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="purchase-icon"><img src="images/purchase-icon2.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Your 6.3% Deposit:</span>
+                                        <span>Your 6.3% Deposit: </span>
                                         <dfn>$23,301</dfn>
                                     </div>
                                 </div>
                                 <div class="purchase-item">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="toltip-icon"><img src="images/tool-tip-icon.png" alt=""></div>
+                                        <div class="purchase-icon"><img src="images/toltip--big-icon.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
-                                        <dfn>$370,102</dfn>
+                                        <span>HOAP at $25,000*</span>
+                                        <dfn>IAH at $25,720*</dfn>
+                                    </div>
+                                    <div class="toltip-text">
+                                        <span>Total: $74,021 </span>
+                                        <em>(20% of the Purchase Price)</em>
                                     </div>
                                 </div>
                                 <div class="purchase-item">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="purchase-icon"><img src="images/purchase-icon4.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
-                                        <dfn>$370,102</dfn>
+                                        <span>Bank Mortgage:</span>
+                                        <dfn>$296,082</dfn>
                                     </div>
                                 </div>
                                 <div class="purchase-item">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="purchase-icon"><img src="images/purchase-icon5.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
-                                        <dfn>$370,102</dfn>
+                                        <span>Monthly Mortgage </span>
+                                        <dfn>Payment: $1,457</dfn>
                                     </div>
                                 </div>
-                                <div class="purchase-item">
+                                <div class="purchase-item total-info">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="total-toltip-icon"><img src="images/tool-tip-icon.png" alt=""></div>
+                                        <h5>MONTHLY CARRYING COST</h5>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
-                                        <dfn>$370,102</dfn>
+                                        <h2>$2,056*</h2>
                                     </div>
                                 </div>
                             </div>
@@ -255,53 +264,57 @@
                                         <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
+                                        <span>Original Purchase Price: </span>
                                         <dfn>$370,102</dfn>
                                     </div>
                                 </div>
                                 <div class="purchase-item">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="purchase-icon"><img src="images/purchase-icon6.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
+                                        <span>ncrease in Value: </span>
+                                        <dfn>$102,252 (5%/year)</dfn>
+                                    </div>
+                                </div>
+                                <div class="purchase-item">
+                                    <div class="purchase-icon-wrap">
+                                        <div class="purchase-icon"><img src="images/purchase-icon7.png" alt=""></div>
+                                    </div>
+                                    <div class="purchase-info">
+                                        <span>Resale Price: $472,354</span>
                                         <dfn>$370,102</dfn>
                                     </div>
                                 </div>
                                 <div class="purchase-item">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="purchase-icon"><img src="images/purchase-icon4.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
-                                        <dfn>$370,102</dfn>
+                                        <span>Re-pay bank mortgage: </span>
+                                        <dfn>$258, 257</dfn>
                                     </div>
                                 </div>
                                 <div class="purchase-item">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                        <div class="toltip-icon"><img src="images/tool-tip-icon.png" alt=""></div>
+                                        <div class="purchase-icon"><img src="images/toltip--big-icon.png" alt=""></div>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
+                                        <span>Re-pay HOAP & IAH Funds: $64,733</span>
                                         <dfn>$370,102</dfn>
+                                    </div>
+                                    <div class="toltip-text">
+                                        <em>*Calculated at (IAH + HOAP)/Purchase Price x Resale Price.</em>
                                     </div>
                                 </div>
-                                <div class="purchase-item">
+                                <div class="purchase-item total-info">
                                     <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
+                                       <div class="total-toltip-icon"><img src="images/tool-tip-icon.png" alt=""></div>
+                                        <h5>INCREASE IN EQUITY AFTER REAL STATE FEES</h5>
                                     </div>
                                     <div class="purchase-info">
-                                        <span>Purchase Price:</span>
-                                        <dfn>$370,102</dfn>
-                                    </div>
-                                </div>
-                                <div class="purchase-item">
-                                    <div class="purchase-icon-wrap">
-                                        <div class="purchase-icon"><img src="images/purchase-icon1.png" alt=""></div>
-                                    </div>
-                                    <div class="purchase-info">
-                                        <span>Purchase Price:</span>
-                                        <dfn>$370,102</dfn>
+                                       <h2>$102,446*</h2>
                                     </div>
                                 </div>
                             </div>
@@ -315,23 +328,26 @@
 
             <!-- Beginning footer section
             ============================== -->
-           <!-- <footer class="main-footer-section">
+            <footer class="main-footer-section">
                 <div class="common-wrap clear footer-inner">
-                    <div class="logo footer-logo">
-                        <img src="images/footer-logo.png" alt="">
-                    </div>
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="#">DISCLAIMER</a></li>
-                            <li><a href="http://www.resbank.co.za">www.resbank.co.za</a></li>
-                        </ul>
+                    <div class="highlighted-content-wrap">
+                        <div class="highlighted-item"><p>Collecdev is a development company dedicated to 
+building better communities. We champion an integrated approach through the development process and are </p></div>
+                        <div class="highlighted-item"><p>committed to being at the forefront of innovation with relevant architecture, a meticulous attention to detail, and uncompromising standards of quality.</p></div>
+                        <div class="highlighted-item">
+                            <div class="social-wrap">
+                                <a href="#"><img src="images/instagram-color.png" alt=""></a>
+                                <a href="#"><img src="images/linkdin-color.png" alt=""></a>
+                                <a href="#"><img src="images/facebook-color.png" alt=""></a>
+                                <a href="#"><img src="images/twitter-color.png" alt=""></a>
+                            </div>
+                            <p class="copyright">Copyright ©2019 Collecdev. All rights reserved.</p>
+                        </div>
                     </div>
                 </div>
-            </footer>-->
+            </footer>
             <!-- //End main footer section -->
         </div>
-
         <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="scripts/slick.js"></script>
         <script type="text/javascript" src="scripts/jquery.mCustomScrollbar.concat.min.js"></script>
