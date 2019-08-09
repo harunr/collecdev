@@ -110,6 +110,7 @@
                     $('body').css('overflow-y','visible');
                     $('.green-living-wrap').fadeOut()
                     $('body').removeClass("header-bg")
+                    $('body').removeClass("fullWiden")
                 })
 
 
@@ -140,8 +141,8 @@
 
 
 
-                $('body').on('click', 'a.expandicon', function(e) {
-                     console.log("shar")
+                $('body').on('click', '#greenFullViewImage a.expandicon', function(e) {
+                    
                     $('body').addClass("fullWiden")
                 });
 
@@ -158,25 +159,24 @@
 
              var sections = $('.scroll'),
                     nav = $('.manual-controlled'),
-                    header = $('header'),
-                    nav_height = header.outerHeight();
+                    header = $('header')
+             
+                    $(window).on('scroll', function () {
+                        var cur_pos = $(this).scrollTop();
+                        sections.each(function () {
+                                var top = $(this).offset().top,
+                                bottom = top + $(this).outerHeight();
 
-                $(window).on('scroll', function () {
-                    var cur_pos = $(this).scrollTop();
+                            if (cur_pos >= top && cur_pos <= bottom) {
+                                nav.find('a').parent().removeClass('current-menu-item');
+                                sections.removeClass('active');
+                                $(this).addClass('active');
+                                nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('current-menu-item');
 
-                    sections.each(function () {
-                        var top = $(this).offset().top,
-                            bottom = top + $(this).outerHeight();
+                            }
 
-                        if (cur_pos >= top && cur_pos <= bottom) {
-                            nav.find('a').parent().removeClass('current-menu-item');
-                            sections.removeClass('active');
-
-                            $(this).addClass('active');
-                            nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('current-menu-item');
-                        }
+                        });
                     });
-                });
 
                 $('#navigation_bullet').find('a').on('click', function (e) {
 
@@ -196,15 +196,16 @@
         
          $('.video-info').each(function(){
                 var $_this = $(this)
-                $_this.find(".video-play-button").on('click', function(e){
-                    e.preventDefault();
-                    $_this.find('.video-overlay').addClass('open');
-                    $(this).fadeOut();
-                    $_this.find(".tutorial").html( $_this.find('div.video-container').html());
-                    $_this.parents('.main-content-wrap').css({'z-index': 302});
+                $_this.on('click', function(){
+                    $_this.parents('.video-wrap').find('.video-overlay').addClass('open');
+                    $('.circle-cursor').fadeOut();
+                    $_this.parents('.video-wrap').find(".tutorial").html( $_this.find('div.video-container').html());
+                    $_this.parents('.main-content-wrap').css({'z-index': 500});
+                    //$_this.parents('.video-wrap').find('#videos')[0].src += "?autoplay=1";
+                    
                 });
 
-               $_this.find('.video-overlay, .video-overlay-close').on('click', function (e) {
+              $_this.parents('.video-wrap').find('.video-overlay, .video-overlay-close').on('click', function (e) {
                     e.preventDefault();
                     close_video();
                 });
@@ -216,8 +217,8 @@
                 });
 
                 function close_video(){
-                    $_this.find('.video-overlay.open').removeClass('open').find('iframe').remove();
-                    $_this.find(".video-play-button").fadeIn();
+                    $_this.parents('.video-wrap').find('.video-overlay.open').removeClass('open').find('iframe').remove();
+                    $_this.parents('.video-wrap').find(".circle-cursor").fadeIn();
                     
                 };  
              
@@ -227,9 +228,9 @@
         
         
         
-                var delayTime = 0;
-        var tdelayTime = 3.2;
-        var pTdelayTime = 2.6;
+            var delayTime = 0;
+            var tdelayTime = 3.2;
+            var pTdelayTime = 2.6;
         
         $('.sgv-text').each(function(i){
             $(this).css({
@@ -280,6 +281,29 @@
                 }
             });
         });
+        
+        
+        
+        
+           if($(".animated-cursor").length){
+            $(".animated-cursor").mouseenter(function(){
+                $(".circle-cursor").css({
+                    "opacity" : 1,
+                    "visibility" : "visible"
+                });
+            });
+            $(".animated-cursor").mouseleave(function(){
+                $(".circle-cursor").css({
+                    "opacity" : 0,
+                    "visibility" : "hidden"
+                })
+            
+            });
+        }
+        
+        
+        
+        
         
         
         
