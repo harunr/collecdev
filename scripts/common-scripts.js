@@ -241,6 +241,16 @@
                 'transition-delay' : pTdelayTime + (i*3.2) + 's'
             });
         })
+
+        var invoitdelayTime = 0;
+        var textAnimateTime = 1.5
+        
+        $('.involving-info .collecdev-text path').each(function(i){
+            $(this).css({
+                'animation-delay' : invoitdelayTime + (i*1.5) + 's',
+                'transition-delay' : textAnimateTime + (i*1.5) + 's'
+            });
+        })
         
         
          // This function for scroll from bottom animation

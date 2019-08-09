@@ -426,7 +426,7 @@ button.slick-next,button.slick-prev{display: none !important}
 }
 
 .sgv-text path{fill: transparent;}
-.start-animate #w,.start-animate .sgv-text path{-webkit-transition: fill .5s ease-in; -moz-transition: fill .5s ease-in; transition: fill .5s ease-in; transition-delay: 2.6s; fill: black;}
+.start-animate #w,.start-animate .sgv-text path, .involving-info .collecdev-text path{-webkit-transition: fill .5s ease-in; -moz-transition: fill .5s ease-in; transition: fill .5s ease-in; transition-delay: 2.6s; fill: black;}
 .start-animate .sgv-text .text-a{-webkit-animation: a-animate 2.5s linear 0s forwards; animation: a-animate 2.5s linear 0s forwards;} 
 .start-animate .sgv-text .text-w{-webkit-animation: w-animate 2.5s linear 0s forwards; animation: w-animate 2.5s linear 0s forwards;} 
 .start-animate .sgv-text .text-r{-webkit-animation: r-animate 2.5s linear 0s forwards; animation: r-animate 2.5s linear 0s forwards;} 
@@ -562,6 +562,19 @@ button.slick-next,button.slick-prev{display: none !important}
 .home-content #content-details{position: relative}
 .big-text-deals{position: absolute; left: 0; bottom: 0; width: 100%; z-index: 1;}
 .big-text-deals span{display: inline-block; font-size:439px;line-height: 300px;color: #000000;text-transform: uppercase; font-family: 'AWConquerorDidot-Light';}
+.mother-img {
+    position: absolute;
+    width: 160px;
+    left: 90px;
+    top: 23px;
+    z-index: 55;
+}
+.mother-img img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
 
 .purchase-details-section{padding: 345px 0 180px}
 .purchase-details-wrap{float: left; width: 100%;}
@@ -626,15 +639,6 @@ button.slick-next,button.slick-prev{display: none !important}
 .home-content .animated-cursor{ clear: both; width: 100%; height: 100%; cursor:none; overflow: hidden;position: relative; z-index: 30}
 
 
-
-
-
-
-
-
-
-
-
 .text-aa{ stroke: black; stroke-width: 2px; stroke-dasharray: 1230px; stroke-dashoffset: -1230px; }
 .start-animate .sgv-text .text-aa{-webkit-animation: d-animate 2.5s linear 0s forwards; animation: aa-animate 2.5s linear 0s forwards;}
 .start-animate .aa.sgv-text{transition-delay: 17s; opacity: 1}
@@ -659,6 +663,152 @@ button.slick-next,button.slick-prev{display: none !important}
         stroke-dashoffset: 0px;
     }
 }
+
+
+.involving-info .collecdev-text{left: -160px; top: -15%; position: absolute; width: 100px;}
+.involving-info .collecdev-text path{transition: all .3s ease-in; fill: transparent; stroke: black;
+    stroke-width: 2px;}
+
+
+.involving-info .collecdev-text .c-text{stroke-dasharray: 328px; stroke-dashoffset: -328px;}
+.involving-info .collecdev-text .o-text{stroke-dasharray: 200px; stroke-dashoffset: -200px;}
+.involving-info .collecdev-text .l-text{stroke-dasharray: 268px; stroke-dashoffset: -268px;}
+.involving-info .collecdev-text .e-text{stroke-dasharray: 500px; stroke-dashoffset: -500px;}
+.involving-info .collecdev-text .d-text{stroke-dasharray: 230px; stroke-dashoffset: -230px;}
+.involving-info .collecdev-text .v-text{stroke-dasharray: 305px; stroke-dashoffset: -305px;}
+
+
+.involving-info .collecdev-text.start-animate{transition-delay: 14.5s; opacity: 0;}
+.involving-info .collecdev-text.start-animate path{fill: black;}
+.involving-info .collecdev-text.start-animate .c-text{-webkit-animation: c-animate 1.5s linear 0s forwards; animation: c-animate 1.5s linear 0s forwards;} 
+.involving-info .collecdev-text.start-animate .o-text{-webkit-animation: o-animate 1.5s linear 0s forwards; animation: c-animate 1.5s linear 0s forwards;} 
+.involving-info .collecdev-text.start-animate .l-text{-webkit-animation: l-animate 1.5s linear 0s forwards; animation: c-animate 1.5s linear 0s forwards;} 
+.involving-info .collecdev-text.start-animate .e-text{-webkit-animation: e-animate 1.5s linear 0s forwards; animation: c-animate 1.5s linear 0s forwards;} 
+.involving-info .collecdev-text.start-animate .d-text{-webkit-animation: d-animate 1.5s linear 0s forwards; animation: c-animate 1.5s linear 0s forwards;} 
+.involving-info .collecdev-text.start-animate .v-text{-webkit-animation: v-animate 1.5s linear 0s forwards; animation: c-animate 1.5s linear 0s forwards;} 
+
+
+
+
+@-webkit-keyframes c-animate {
+    from {
+        stroke-dashoffset: -328px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes c-animate {
+    from {
+        stroke-dashoffset: -328px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@-webkit-keyframes o-animate {
+    from {
+        stroke-dashoffset: -200px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes o-animate {
+    from {
+        stroke-dashoffset: -200px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+@-webkit-keyframes l-animate {
+    from {
+        stroke-dashoffset: -270px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes l-animate {
+    from {
+        stroke-dashoffset: -270px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@-webkit-keyframes e-animate {
+    from {
+        stroke-dashoffset: -500px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes e-animate {
+    from {
+        stroke-dashoffset: -500px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@-webkit-keyframes d-animate {
+    from {
+        stroke-dashoffset: -230px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes d-animate {
+    from {
+        stroke-dashoffset: -230px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@-webkit-keyframes v-animate {
+    from {
+        stroke-dashoffset: -305px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes v-animate {
+    from {
+        stroke-dashoffset: -305px;
+    }
+
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
 
 
 
